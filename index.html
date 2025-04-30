@@ -272,6 +272,57 @@
                 max-width: calc(50% - 20px);
             }
         }
+
+        /* Ícone do WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-icon {
+            margin-top: 5px;
+        }
+        
+        /* Efeito de pulsação */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .whatsapp-float.pulse {
+            animation: pulse 1.5s infinite;
+        }
+        
+        /* Responsivo para mobile */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -284,12 +335,6 @@
         </div>
     </header>
     
-    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" 
-       class="whatsapp-float pulse" 
-       target="_blank"
-       aria-label="Chat no WhatsApp">
-       <i class="whatsapp-icon">💬</i>
-    </a>
     <!-- Menu de Navegação -->
     <nav>
         <a href="#sobre">Sobre</a>
@@ -398,5 +443,13 @@
         <p>🐾 Horário de Atendimento: Seg-Sex 8h-19h | Sáb 9h-13h 🐾</p>
         <p>&copy; 2025 Clínica Veterinária Bailarina Capuccina. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Ícone Flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5511912345678&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" 
+       class="whatsapp-float pulse" 
+       target="_blank"
+       aria-label="Chat no WhatsApp">
+       <i class="whatsapp-icon">💬</i>
+    </a>
 </body>
 </html>
