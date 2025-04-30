@@ -16,13 +16,12 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: white;
         }
         
         /* Header (Logo + Título) */
         header {
-            background: #4CAF50;
-            color: white;
+            background: white;
             padding: 1rem;
             text-align: center;
             display: flex;
@@ -30,6 +29,7 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+            border-bottom: 2px solid #4CAF50;
         }
         
         .logo {
@@ -37,7 +37,7 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid white;
+            border: 3px solid #b350af;
         }
         
         .header-text {
@@ -45,9 +45,19 @@
             min-width: 200px;
         }
         
+        .header-text h1 {
+            color: #b350af;
+            margin-bottom: 5px;
+        }
+        
+        .header-text p {
+            color: #4CAF50;
+            font-style: italic;
+        }
+        
         /* Menu de Navegação */
         nav {
-            background: #333;
+            background: #b350af;
             padding: 1rem;
             text-align: center;
             position: sticky;
@@ -67,7 +77,7 @@
         }
         
         nav a:hover {
-            color: #4CAF50;
+            color: #b350af;
             background-color: white;
         }
         
@@ -85,7 +95,7 @@
         }
         
         .banner h2 {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             font-size: 1.5rem;
@@ -93,6 +103,7 @@
             z-index: 1;
             color: #b350af;
             font-weight: bold;
+            border: 2px solid #4CAF50;
         }
         
         /* Seções (Serviços, Equipe, Blog, etc.) */
@@ -105,7 +116,7 @@
         h2 {
             text-align: center;
             margin-bottom: 30px;
-            color: #4CAF50;
+            color: #b350af;
             font-size: 2rem;
             position: relative;
         }
@@ -129,7 +140,7 @@
         }
         
         .service-card, .team-card, .blog-card {
-            border: 1px solid #ddd;
+            border: 2px solid #4CAF50;
             border-radius: 8px;
             padding: 20px;
             width: 100%;
@@ -142,6 +153,7 @@
         .service-card:hover, .team-card:hover, .blog-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-color: #b350af;
         }
         
         /* Fotos da Equipe */
@@ -151,11 +163,11 @@
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 15px;
-            border: 3px solid #4CAF50;
+            border: 3px solid #b350af;
         }
         
         .team-card h3 {
-            color: #4CAF50;
+            color: #b350af;
             margin-bottom: 5px;
         }
         
@@ -171,11 +183,12 @@
             border: none;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4CAF50;
         }
         
         /* Rodapé */
         footer {
-            background: #333;
+            background: #b350af;
             color: white;
             text-align: center;
             padding: 2rem;
@@ -183,7 +196,7 @@
         }
         
         footer a {
-            color: #4CAF50;
+            color: white;
             text-decoration: none;
             font-weight: bold;
         }
@@ -199,6 +212,11 @@
         .social-links a {
             margin: 0 10px;
             font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #4CAF50;
         }
         
         /* Responsividade (Mobile, Tablet, Desktop) */
